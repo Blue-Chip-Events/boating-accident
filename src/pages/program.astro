@@ -1,0 +1,136 @@
+---
+import "../styles/global.css";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Program - Boating Accident</title>
+  </head>
+  <body class="bg-blue-50 text-slate-900">
+    <!-- Navigation -->
+    <nav class="bg-slate-900 text-white py-4">
+      <div class="mx-auto max-w-6xl px-6 lg:px-8">
+        <div class="flex items-center justify-between">
+          <a href="/" class="text-xl font-bold">⚓ Boating Accident</a>
+          <div class="space-x-6">
+            <a href="/about" class="hover:text-blue-300 transition-colors">About</a>
+            <a href="/program" class="text-blue-300">Program</a>
+            <a href="/crew" class="hover:text-blue-300 transition-colors">Crew</a>
+            <a href="/contact" class="hover:text-blue-300 transition-colors">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="min-h-screen">
+      <!-- Header -->
+      <section class="bg-gradient-to-br from-blue-900 via-slate-800 to-teal-900 text-white py-16">
+        <div class="mx-auto max-w-6xl px-6 lg:px-8">
+          <div class="text-center">
+            <h1 class="text-4xl font-bold tracking-tight sm:text-6xl">
+              🗓️ Voyage Schedule
+            </h1>
+            <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-blue-200">
+              Chart your course through our maritime crypto conference
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Program Content -->
+      <section class="py-16 lg:py-24">
+        <div class="mx-auto max-w-6xl px-6 lg:px-8">
+          <div class="space-y-12">
+            <!-- Day 1 -->
+            <div>
+              <h2 class="text-3xl font-bold text-slate-900 mb-8">⛵ Day 1 - Setting Sail</h2>
+              <div class="space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow-lg border border-blue-200">
+                  <div class="flex justify-between items-start">
+                    <div>
+                      <h3 class="text-xl font-semibold text-slate-900">Opening Ceremony</h3>
+                      <p class="text-slate-600 mt-2">Welcome aboard! Captain's address and conference overview</p>
+                    </div>
+                    <span class="text-teal-600 font-semibold">09:00 - 10:00</span>
+                  </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-lg border border-blue-200">
+                  <div class="flex justify-between items-start">
+                    <div>
+                      <h3 class="text-xl font-semibold text-slate-900">Navigating the Crypto Waters</h3>
+                      <p class="text-slate-600 mt-2">Keynote on blockchain fundamentals and maritime applications</p>
+                    </div>
+                    <span class="text-teal-600 font-semibold">10:30 - 11:30</span>
+                  </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-lg border border-blue-200">
+                  <div class="flex justify-between items-start">
+                    <div>
+                      <h3 class="text-xl font-semibold text-slate-900">Treasure Hunt Workshop</h3>
+                      <p class="text-slate-600 mt-2">Hands-on session: Finding value in DeFi protocols</p>
+                    </div>
+                    <span class="text-teal-600 font-semibold">14:00 - 16:00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Day 2 -->
+            <div>
+              <h2 class="text-3xl font-bold text-slate-900 mb-8">🏴‍☠️ Day 2 - Deep Waters</h2>
+              <div class="space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow-lg border border-blue-200">
+                  <div class="flex justify-between items-start">
+                    <div>
+                      <h3 class="text-xl font-semibold text-slate-900">Pirate Panel: NFT Treasures</h3>
+                      <p class="text-slate-600 mt-2">Expert discussion on digital collectibles and maritime art</p>
+                    </div>
+                    <span class="text-teal-600 font-semibold">09:00 - 10:30</span>
+                  </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-lg border border-blue-200">
+                  <div class="flex justify-between items-start">
+                    <div>
+                      <h3 class="text-xl font-semibold text-slate-900">Ship-to-Ship Trading</h3>
+                      <p class="text-slate-600 mt-2">Advanced trading strategies and cross-chain navigation</p>
+                    </div>
+                    <span class="text-teal-600 font-semibold">11:00 - 12:30</span>
+                  </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-lg border border-blue-200">
+                  <div class="flex justify-between items-start">
+                    <div>
+                      <h3 class="text-xl font-semibold text-slate-900">Closing Ceremony & Shore Leave</h3>
+                      <p class="text-slate-600 mt-2">Final announcements and networking reception</p>
+                    </div>
+                    <span class="text-teal-600 font-semibold">16:00 - 18:00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white relative">
+      <div class="absolute top-0 left-0 right-0 h-2 bg-amber-600" style="background-image: repeating-linear-gradient(90deg, #d97706 0px, #d97706 10px, #92400e 10px, #92400e 20px);"></div>
+      <div class="mx-auto max-w-6xl px-6 py-8 lg:px-8">
+        <div class="text-center">
+          <p class="text-blue-300 text-sm">
+            © 2025 Boating Accident. All maritime rights reserved. 🏴‍☠️
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
