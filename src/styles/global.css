@@ -3,10 +3,21 @@
 @theme {
   --color-background: #040d1f;
   --color-background-alt: #061126;
+  --color-accent: #F0F0F0;
   --color-foreground: #60F2FF;
 
   --background-image-tiled: url('/tile.png');
   --background-image-tiled-dark: url('/tiledark.png');
+}
+
+/* Tiled background size adjustments */
+.bg-tiled {
+  background-size: 25%;
+  background-blend-mode: overlay;
+}
+
+.bg-tiled-dark {
+  background-size: 25%;;
 }
 
 /* View Transition Styles */

@@ -1,16 +1,17 @@
 ---
 import Layout from '../components/Layout.astro';
+import Heading from '../components/sections/Heading.astro';
 ---
 
 <Layout title="About the Voyage - Boating Accident" currentPage="about">
   <!-- Header -->
-  <section class="bg-[#061126] text-white py-16 border-b border-gray-700">
+  <section class="bg-[#061126] text-white py-16 border-b border-gray-700 col-span-5">
     <div class="mx-auto max-w-6xl px-6 lg:px-8">
-      <div class="text-center">
-        <h1 class="text-4xl font-bold tracking-tight sm:text-6xl" style="font-family: 'Handjet', monospace; image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges; text-rendering: geometricPrecision; font-weight: 300; letter-spacing: 0.05em;">
+      <div class="text-left">
+        <Heading level={1} size="4xl" class="sm:text-5xl lg:text-6xl">
           About
-        </h1>
-        <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-400 font-mono">
+        </Heading>
+        <p class="mt-6 max-w-2xl text-lg leading-8 text-gray-400 font-mono">
           Conference Information
         </p>
       </div>
@@ -18,13 +19,13 @@ import Layout from '../components/Layout.astro';
   </section>
 
   <!-- About Content -->
-  <section class="py-16 lg:py-24">
+  <section class="py-16 lg:py-24 col-span-5">
     <div class="mx-auto max-w-6xl px-6 lg:px-8">
       <div class="space-y-16">
         <!-- Mission -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 class="text-3xl font-bold text-white mb-6" style="font-family: 'Handjet', monospace; image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges; text-rendering: geometricPrecision; font-weight: 300; letter-spacing: 0.05em;">Our Mission</h2>
+            <Heading level={2} size="3xl" class="mb-6">Our Mission</Heading>
             <p class="text-lg text-gray-400 mb-4 font-mono">
               Boating Accident isn't just another crypto conference—it's a maritime journey through the uncharted waters of blockchain innovation. We believe the best discoveries happen when you venture beyond safe harbors.
             </p>
@@ -34,7 +35,7 @@ import Layout from '../components/Layout.astro';
           </div>
           <div class="bg-[#061126] p-8 border border-gray-600">
             <div class="text-center">
-              <h3 class="text-xl font-semibold text-white mb-2" style="font-family: 'Handjet', monospace; image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges; text-rendering: geometricPrecision; font-weight: 300; letter-spacing: 0.05em;">Adventure Awaits</h3>
+              <Heading level={3} size="xl" class="mb-2">Adventure Awaits</Heading>
               <p class="text-gray-400 font-mono">Join us for a conference like no other, where crypto meets the high seas</p>
             </div>
           </div>
@@ -42,18 +43,18 @@ import Layout from '../components/Layout.astro';
 
         <!-- What to Expect -->
         <div>
-          <h2 class="text-3xl font-bold text-white mb-8 text-center" style="font-family: 'Handjet', monospace; image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges; text-rendering: geometricPrecision; font-weight: 300; letter-spacing: 0.05em;">What to Expect</h2>
+          <Heading level={2} size="3xl" class="mb-8 text-center">What to Expect</Heading>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="bg-[#061126] p-6 border border-gray-600 text-center">
-              <h3 class="text-xl font-semibold text-white mb-3" style="font-family: 'Handjet', monospace; image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges; text-rendering: geometricPrecision; font-weight: 300; letter-spacing: 0.05em;">Expert Navigation</h3>
+              <Heading level={3} size="xl" class="mb-3">Expert Navigation</Heading>
               <p class="text-gray-400 font-mono">Learn from the most experienced crypto captains who've weathered many storms and discovered countless treasures.</p>
             </div>
             <div class="bg-[#061126] p-6 border border-gray-600 text-center">
-              <h3 class="text-xl font-semibold text-white mb-3" style="font-family: 'Handjet', monospace; image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges; text-rendering: geometricPrecision; font-weight: 300; letter-spacing: 0.05em;">Crew Networking</h3>
+              <Heading level={3} size="xl" class="mb-3">Crew Networking</Heading>
               <p class="text-gray-400 font-mono">Form alliances with fellow sailors, share tales of your voyages, and plan future expeditions together.</p>
             </div>
             <div class="bg-[#061126] p-6 border border-gray-600 text-center">
-              <h3 class="text-xl font-semibold text-white mb-3" style="font-family: 'Handjet', monospace; image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges; text-rendering: geometricPrecision; font-weight: 300; letter-spacing: 0.05em;">Treasure Discovery</h3>
+              <Heading level={3} size="xl" class="mb-3">Treasure Discovery</Heading>
               <p class="text-gray-400 font-mono">Uncover hidden gems in the crypto world through hands-on workshops and exclusive insights.</p>
             </div>
           </div>
@@ -61,7 +62,7 @@ import Layout from '../components/Layout.astro';
 
         <!-- History -->
         <div class="bg-[#061126] p-8 border border-gray-600">
-          <h2 class="text-3xl font-bold text-white mb-6" style="font-family: 'Handjet', monospace; image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges; text-rendering: geometricPrecision; font-weight: 300; letter-spacing: 0.05em;">The Legend</h2>
+          <Heading level={2} size="3xl" class="mb-6">The Legend</Heading>
           <p class="text-lg text-gray-400 mb-4 font-mono">
             The story goes that in the early days of crypto, a group of pioneering traders set sail for uncharted digital waters. What started as a simple voyage turned into an unexpected adventure—a "boating accident" that led to the discovery of incredible treasures.
           </p>
@@ -72,7 +73,7 @@ import Layout from '../components/Layout.astro';
 
         <!-- Location -->
         <div class="text-center">
-          <h2 class="text-3xl font-bold text-white mb-6" style="font-family: 'Handjet', monospace; image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges; text-rendering: geometricPrecision; font-weight: 300; letter-spacing: 0.05em;">Port of Call</h2>
+          <Heading level={2} size="3xl" class="mb-6">Port of Call</Heading>
           <p class="text-xl text-gray-400 mb-4 font-mono">Finland - The Land of a Thousand Lakes</p>
           <p class="text-lg text-gray-400 font-mono">
             Our maritime adventure will dock in beautiful Finland, where the convergence of Nordic innovation and crypto culture creates the perfect harbor for our conference.

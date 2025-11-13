@@ -1,16 +1,17 @@
 ---
 import Layout from '../components/Layout.astro';
+import Heading from '../components/sections/Heading.astro';
 ---
 
 <Layout title="Ship's Articles - Boating Accident">
   <!-- Header -->
-  <section class="bg-[#061126] text-white py-16 border-b border-gray-700">
+  <section class="bg-[#061126] text-white py-16 border-b border-gray-700 col-span-5">
     <div class="mx-auto max-w-6xl px-6 lg:px-8">
-      <div class="text-center">
-        <h1 class="text-4xl font-bold tracking-tight sm:text-6xl" style="font-family: 'Handjet', monospace; image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges; text-rendering: geometricPrecision; font-weight: 300; letter-spacing: 0.05em;">
+      <div class="text-left">
+        <Heading level={1} size="4xl" class="sm:text-5xl lg:text-6xl">
           Ship's Articles
-        </h1>
-        <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-400 font-mono">
+        </Heading>
+        <p class="mt-6 max-w-2xl text-lg leading-8 text-gray-400 font-mono">
           Privacy policy and data protection guidelines for our maritime adventure
         </p>
       </div>
@@ -18,15 +19,15 @@ import Layout from '../components/Layout.astro';
   </section>
 
   <!-- Privacy Policy Content -->
-  <section class="py-16 lg:py-24">
+  <section class="py-16 lg:py-24 col-span-5">
     <div class="mx-auto max-w-4xl px-6 lg:px-8">
       <div class="prose prose-slate max-w-none">
         <div class="bg-[#061126] p-8 border border-gray-600">
-          <h2 class="text-2xl font-bold text-white mb-6" style="font-family: 'Handjet', monospace; image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges; text-rendering: geometricPrecision; font-weight: 300; letter-spacing: 0.05em;">Maritime Privacy Code</h2>
+          <Heading level={2} size="2xl" class="mb-6">Maritime Privacy Code</Heading>
 
           <div class="space-y-8">
             <section>
-              <h3 class="text-xl font-semibold text-white mb-4" style="font-family: 'Handjet', monospace; image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges; text-rendering: geometricPrecision; font-weight: 300; letter-spacing: 0.05em;">Captain's Log Entry</h3>
+              <Heading level={3} size="xl" class="mb-4">Captain's Log Entry</Heading>
               <p class="text-gray-400 mb-4 font-mono">
                 Effective Date: January 1, 2025
               </p>
@@ -36,7 +37,7 @@ import Layout from '../components/Layout.astro';
             </section>
 
             <section>
-              <h3 class="text-xl font-semibold text-white mb-4" style="font-family: 'Handjet', monospace; image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges; text-rendering: geometricPrecision; font-weight: 300; letter-spacing: 0.05em;">Information We Chart</h3>
+              <Heading level={3} size="xl" class="mb-4">Information We Chart</Heading>
               <div class="space-y-4">
                 <div>
                   <h4 class="font-semibold text-white" style="font-family: 'Handjet', monospace; image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges; text-rendering: geometricPrecision; font-weight: 300; letter-spacing: 0.05em;">Registration Information</h4>
@@ -54,7 +55,7 @@ import Layout from '../components/Layout.astro';
             </section>
 
             <section>
-              <h3 class="text-xl font-semibold text-white mb-4" style="font-family: 'Handjet', monospace; image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges; text-rendering: geometricPrecision; font-weight: 300; letter-spacing: 0.05em;">How We Navigate Your Data</h3>
+              <Heading level={3} size="xl" class="mb-4">How We Navigate Your Data</Heading>
               <ul class="list-disc list-inside text-gray-400 space-y-2 font-mono">
                 <li>Conference registration and ticket management</li>
                 <li>Sending important voyage updates and maritime announcements</li>
@@ -65,7 +66,7 @@ import Layout from '../components/Layout.astro';
             </section>
 
             <section>
-              <h3 class="text-xl font-semibold text-white mb-4" style="font-family: 'Handjet', monospace; image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges; text-rendering: geometricPrecision; font-weight: 300; letter-spacing: 0.05em;">Your Crew Rights</h3>
+              <Heading level={3} size="xl" class="mb-4">Your Crew Rights</Heading>
               <div class="bg-[#061126] p-6 border border-gray-600">
                 <p class="text-gray-400 mb-4 font-mono">As a member of our crew, you have the right to:</p>
                 <ul class="list-disc list-inside text-gray-400 space-y-2 font-mono">
@@ -79,7 +80,7 @@ import Layout from '../components/Layout.astro';
             </section>
 
             <section>
-              <h3 class="text-xl font-semibold text-white mb-4" style="font-family: 'Handjet', monospace; image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges; text-rendering: geometricPrecision; font-weight: 300; letter-spacing: 0.05em;">Treasure Protection</h3>
+              <Heading level={3} size="xl" class="mb-4">Treasure Protection</Heading>
               <p class="text-gray-400 mb-4 font-mono">
                 We implement industry-standard security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. Our data is encrypted both in transit and at rest, stored on secure servers with restricted access.
               </p>
@@ -89,7 +90,7 @@ import Layout from '../components/Layout.astro';
             </section>
 
             <section>
-              <h3 class="text-xl font-semibold text-white mb-4" style="font-family: 'Handjet', monospace; image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges; text-rendering: geometricPrecision; font-weight: 300; letter-spacing: 0.05em;">Third-Party Waters</h3>
+              <Heading level={3} size="xl" class="mb-4">Third-Party Waters</Heading>
               <p class="text-gray-400 mb-4 font-mono">
                 We may share your information with trusted third-party service providers who help us operate our conference, such as:
               </p>
@@ -105,7 +106,7 @@ import Layout from '../components/Layout.astro';
             </section>
 
             <section>
-              <h3 class="text-xl font-semibold text-white mb-4" style="font-family: 'Handjet', monospace; image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges; text-rendering: geometricPrecision; font-weight: 300; letter-spacing: 0.05em;">Signal the Harbor Master</h3>
+              <Heading level={3} size="xl" class="mb-4">Signal the Harbor Master</Heading>
               <p class="text-gray-400 mb-4 font-mono">
                 If you have any questions about these Ship's Articles or wish to exercise your crew rights, please contact our Harbor Master:
               </p>
@@ -119,7 +120,7 @@ import Layout from '../components/Layout.astro';
             </section>
 
             <section>
-              <h3 class="text-xl font-semibold text-white mb-4" style="font-family: 'Handjet', monospace; image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges; text-rendering: geometricPrecision; font-weight: 300; letter-spacing: 0.05em;">Maritime Law Changes</h3>
+              <Heading level={3} size="xl" class="mb-4">Maritime Law Changes</Heading>
               <p class="text-gray-400 font-mono">
                 We may update these Ship's Articles from time to time. Any changes will be posted on this page with a new effective date. We encourage you to review this document periodically during your voyage with us.
               </p>

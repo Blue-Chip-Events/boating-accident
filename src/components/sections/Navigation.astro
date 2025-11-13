@@ -1,0 +1,63 @@
+---
+export interface Props {
+  currentPage?: string
+}
+
+const { currentPage } = Astro.props
+---
+
+<style>
+  .marquee-container {
+    view-transition-name: marquee-logo;
+  }
+
+  .marquee-text {
+    animation: marquee 13.5s linear infinite;
+    animation-play-state: running;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+</style>
+
+<nav
+  class="sticky top-0 z-50 text-white py-4 bg-background/60 backdrop-blur-sm"
+  style="view-transition-name: navbar;"
+>
+  <div class="mx-auto max-w-6xl px-6 lg:px-8">
+    <div class="flex items-center justify-between">
+      <div
+        class="text-2xl font-bold overflow-hidden whitespace-nowrap text-foreground marquee-container"
+        style="font-family: 'Handjet', monospace; image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges; text-rendering: geometricPrecision; font-weight: 400; letter-spacing: 0.1em;"
+      >
+        <a href="/" class="inline-block marquee-text">Boating Accident 2026</a>
+      </div>
+      <div class="space-x-6 font-mono">
+        <a
+          href="/about"
+          class={currentPage === "about"
+            ? "text-white"
+            : "hover:text-white transition-colors text-gray-400"}>About</a
+        >
+        <a
+          href="/program"
+          class={currentPage === "program"
+            ? "text-white"
+            : "hover:text-white transition-colors text-gray-400"}>Program</a
+        >
+        <a
+          href="/contact"
+          class={currentPage === "contact"
+            ? "text-white"
+            : "hover:text-white transition-colors text-gray-400"}>Contact</a
+        >
+      </div>
+    </div>
+  </div>
+</nav>

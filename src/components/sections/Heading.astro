@@ -27,6 +27,6 @@ const sizeClasses = {
 const headingStyle = "font-family: 'Handjet', monospace; image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges; text-rendering: geometricPrecision; font-weight: 400; letter-spacing: 0.05em;";
 ---
 
-<Tag class={`font-bold tracking-tight text-white ${sizeClasses[size]} ${className}`} style={headingStyle}>
+<Tag class={`font-bold tracking-tight ${sizeClasses[size]} ${className}`} style={headingStyle}>
   <slot />
 </Tag>
