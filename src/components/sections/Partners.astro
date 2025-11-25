@@ -1,4 +1,5 @@
 ---
+import PartnerLogo from "../primitives/PartnerLogo.astro"
 import Heading from "./Heading.astro"
 ---
 
@@ -9,86 +10,34 @@ import Heading from "./Heading.astro"
     </div>
     <div class="mt-16">
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 items-center justify-items-center">
-        <a
-          class="flex items-center justify-center p-6 h-24 w-48"
+        <PartnerLogo
           href="https://equilibrium.co"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src="/logos/equilibrium.svg"
-            alt="Sponsor"
-            class="max-h-full max-w-full object-contain"
-          />
-        </a>
-        <a
-          class="flex items-center justify-center p-6 h-24 w-48"
-          href="https://valos.io"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src="/logos/valos-logo-black-rgb.svg"
-            alt="Sponsor"
-            class="max-h-full max-w-full object-contain"
-          />
-        </a>
-        <a
-          class="flex items-center justify-center p-6 h-24 w-48"
-          href="https://thehedgehog.io/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src="/logos/hedgehog.svg"
-            alt="Sponsor"
-            class="max-h-full max-w-full object-contain"
-          />
-        </a>
-        <a
-          class="flex items-center justify-center p-6 h-24 w-48"
+          logo="/logos/equilibrium.svg"
+          alt="Equilibrium"
+        />
+        <PartnerLogo href="https://valos.io" logo="/logos/valos-logo-black-rgb.svg" alt="Valos" />
+        <PartnerLogo href="https://thehedgehog.io/" logo="/logos/hedgehog.svg" alt="The Hedgehog" />
+        <PartnerLogo
           href="https://scauditstudio.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src="/logos/scaudit.png"
-            alt="Sponsor"
-            class="max-h-full max-w-full object-contain"
-          />
-        </a>
-        <a
+          logo="/logos/scaudit.png"
+          alt="SCAudit Studio"
+        />
+        <PartnerLogo
           href="https://equilibrium.co/ventures"
-          class="flex items-center justify-center p-6 h-24 w-48"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="/logos/eqv.jpeg" alt="Sponsor" class="max-h-full max-w-full object-contain" />
-        </a>
-        <a
-          href="https://naantali.fi/"
-          class="flex items-center justify-center p-6 h-24 w-48"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src="/logos/naantali.svg"
-            alt="Sponsor"
-            class="max-h-full max-w-full object-contain"
-          />
-        </a>
-        <a
+          logo="/logos/eqv.jpeg"
+          alt="Equilibrium Ventures"
+        />
+        <PartnerLogo href="https://naantali.fi/" logo="/logos/naantali.svg" alt="Naantali" />
+        <PartnerLogo
           href="https://businessturku.fi/"
-          class="flex items-center justify-center p-6 h-24 w-48"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src="/logos/businessturku.png"
-            alt="Sponsor"
-            class="max-h-full max-w-full object-contain"
-          />
-        </a>
+          logo="/logos/businessturku.png"
+          alt="Business Turku"
+        />
+        <PartnerLogo
+          href="https://www.finnlines.com/"
+          logo="/logos/FinnlinesGrimaldilogoRGB_copy.svg"
+          alt="Finnlines"
+        />
       </div>
     </div>
   </div>
