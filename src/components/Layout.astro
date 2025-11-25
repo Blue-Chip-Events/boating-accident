@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css"
+import OpenGraph from "./primitives/OpenGraph.astro"
 import Footer from "./sections/Footer.astro"
 import Navigation from "./sections/Navigation.astro"
 
@@ -18,6 +19,9 @@ const { title, currentPage } = Astro.props
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="view-transition" content="same-origin" />
+
+    <OpenGraph title={title} />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -34,8 +38,7 @@ const { title, currentPage } = Astro.props
     </div>
 
     <Footer />
-  </body>
-  <!-- Google tag (gtag.js) -->
+  </body><!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-G784FVWBYW"></script>
   <script>
     window.dataLayer = window.dataLayer || []
