@@ -1,0 +1,22 @@
+---
+export interface Props {
+  image?: string
+  title?: string
+  type?: string
+  url?: string
+}
+
+const { image, title, type, url } = Astro.props
+
+const defaultImage = "/og.png"
+const defaultTitle = "Boating Accident 2026"
+const defaultType = "website"
+const defaultUrl = "https://boatingaccident.fi"
+---
+
+<>
+  <meta property="og:title" content={title || defaultTitle} />
+  <meta property="og:type" content={type || defaultType} />
+  <meta property="og:url" content={url || defaultUrl} />
+  <meta property="og:image" content={image || defaultImage} />
+</>

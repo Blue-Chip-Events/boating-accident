@@ -1,0 +1,49 @@
+---
+import PartnerLogo from "../primitives/PartnerLogo.astro"
+import Heading from "./Heading.astro"
+---
+
+<section id="partners" class="py-16 lg:py-24 bg-accent text-background col-span-5">
+  <div class="mx-auto max-w-6xl px-6 lg:px-8">
+    <div class="text-center">
+      <Heading level={2} size="3xl" class="sm:text-4xl">Partners</Heading>
+    </div>
+    <div class="mt-16">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 items-center justify-items-center">
+        <PartnerLogo
+          href="https://equilibrium.co"
+          logo="/logos/equilibrium.svg"
+          alt="Equilibrium"
+        />
+        <PartnerLogo href="https://valos.io" logo="/logos/valos-logo-black-rgb.svg" alt="Valos" />
+        <PartnerLogo href="https://thehedgehog.io/" logo="/logos/hedgehog.svg" alt="The Hedgehog" />
+        <PartnerLogo
+          href="https://scauditstudio.com/"
+          logo="/logos/scaudit.png"
+          alt="SCAudit Studio"
+        />
+        <PartnerLogo
+          href="https://equilibrium.co/ventures"
+          logo="/logos/eqv.jpeg"
+          alt="Equilibrium Ventures"
+        />
+        <PartnerLogo href="https://naantali.fi/" logo="/logos/naantali.svg" alt="Naantali" />
+        <PartnerLogo
+          href="https://businessturku.fi/"
+          logo="/logos/businessturku.png"
+          alt="Business Turku"
+        />
+        <PartnerLogo
+          href="https://www.finnlines.com/"
+          logo="/logos/FinnlinesGrimaldilogoRGB_copy.svg"
+          alt="Finnlines"
+        />
+        <PartnerLogo
+          href="https://www.aaltovisuals.com/"
+          logo="/logos/aaltovisuals.webp"
+          alt="Aalto Visuals"
+        />
+      </div>
+    </div>
+  </div>
+</section>

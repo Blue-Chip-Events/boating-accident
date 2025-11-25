@@ -1,16 +1,14 @@
 ---
-import Layout from '../components/Layout.astro';
-import Heading from '../components/sections/Heading.astro';
+import Layout from "../components/Layout.astro"
+import Heading from "../components/sections/Heading.astro"
 ---
 
 <Layout title="Ship's Articles - Boating Accident">
   <!-- Header -->
-  <section class="bg-[#061126] text-white py-16 border-b border-gray-700 col-span-5">
+  <section class="bg-background-alt text-white py-16 border-b border-gray-700 col-span-5">
     <div class="mx-auto max-w-6xl px-6 lg:px-8">
       <div class="text-left">
-        <Heading level={1} size="4xl" class="sm:text-5xl lg:text-6xl">
-          Ship's Articles
-        </Heading>
+        <Heading level={1} size="4xl" class="sm:text-5xl lg:text-6xl"> Ship's Articles </Heading>
         <p class="mt-6 max-w-2xl text-lg leading-8 text-gray-400 font-mono">
           Privacy policy and data protection guidelines for our maritime adventure
         </p>
@@ -22,17 +20,17 @@ import Heading from '../components/sections/Heading.astro';
   <section class="py-16 lg:py-24 col-span-5">
     <div class="mx-auto max-w-4xl px-6 lg:px-8">
       <div class="prose prose-slate max-w-none">
-        <div class="bg-[#061126] p-8 border border-gray-600">
+        <div class="bg-background-alt p-8 border border-gray-600">
           <Heading level={2} size="2xl" class="mb-6">Maritime Privacy Code</Heading>
 
           <div class="space-y-8">
             <section>
               <Heading level={3} size="xl" class="mb-4">Captain's Log Entry</Heading>
-              <p class="text-gray-400 mb-4 font-mono">
-                Effective Date: January 1, 2025
-              </p>
+              <p class="text-gray-400 mb-4 font-mono">Effective Date: January 1, 2025</p>
               <p class="text-gray-400 font-mono">
-                Welcome aboard! At Boating Accident, we respect the privacy of every crew member who joins our maritime crypto adventure. This Ship's Articles document explains how we collect, use, and protect your personal information during your voyage with us.
+                Welcome aboard! At Boating Accident, we respect the privacy of every crew member who
+                joins our maritime crypto adventure. This Ship's Articles document explains how we
+                collect, use, and protect your personal information during your voyage with us.
               </p>
             </section>
 
@@ -40,16 +38,41 @@ import Heading from '../components/sections/Heading.astro';
               <Heading level={3} size="xl" class="mb-4">Information We Chart</Heading>
               <div class="space-y-4">
                 <div>
-                  <h4 class="font-semibold text-white" style="font-family: 'Handjet', monospace; image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges; text-rendering: geometricPrecision; font-weight: 300; letter-spacing: 0.05em;">Registration Information</h4>
-                  <p class="text-gray-400 font-mono">When you sign up for our conference, we collect your name, email address, professional title, and company information to create your crew manifest entry.</p>
+                  <h4
+                    class="font-semibold text-white"
+                    style="font-family: 'Handjet', monospace; image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges; text-rendering: geometricPrecision; font-weight: 300; letter-spacing: 0.05em;"
+                  >
+                    Registration Information
+                  </h4>
+                  <p class="text-gray-400 font-mono">
+                    When you sign up for our conference, we collect your name, email address,
+                    professional title, and company information to create your crew manifest entry.
+                  </p>
                 </div>
                 <div>
-                  <h4 class="font-semibold text-white" style="font-family: 'Handjet', monospace; image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges; text-rendering: geometricPrecision; font-weight: 300; letter-spacing: 0.05em;">Navigation Data</h4>
-                  <p class="text-gray-400 font-mono">We automatically collect information about your interaction with our website, including pages visited, time spent, and technical information about your device.</p>
+                  <h4
+                    class="font-semibold text-white"
+                    style="font-family: 'Handjet', monospace; image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges; text-rendering: geometricPrecision; font-weight: 300; letter-spacing: 0.05em;"
+                  >
+                    Navigation Data
+                  </h4>
+                  <p class="text-gray-400 font-mono">
+                    We automatically collect information about your interaction with our website,
+                    including pages visited, time spent, and technical information about your
+                    device.
+                  </p>
                 </div>
                 <div>
-                  <h4 class="font-semibold text-white" style="font-family: 'Handjet', monospace; image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges; text-rendering: geometricPrecision; font-weight: 300; letter-spacing: 0.05em;">Communication Logs</h4>
-                  <p class="text-gray-400 font-mono">When you contact us via our "Signal the Harbor" form or email, we keep records of our correspondence to provide better support.</p>
+                  <h4
+                    class="font-semibold text-white"
+                    style="font-family: 'Handjet', monospace; image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges; text-rendering: geometricPrecision; font-weight: 300; letter-spacing: 0.05em;"
+                  >
+                    Communication Logs
+                  </h4>
+                  <p class="text-gray-400 font-mono">
+                    When you contact us via our "Signal the Harbor" form or email, we keep records
+                    of our correspondence to provide better support.
+                  </p>
                 </div>
               </div>
             </section>
@@ -67,8 +90,10 @@ import Heading from '../components/sections/Heading.astro';
 
             <section>
               <Heading level={3} size="xl" class="mb-4">Your Crew Rights</Heading>
-              <div class="bg-[#061126] p-6 border border-gray-600">
-                <p class="text-gray-400 mb-4 font-mono">As a member of our crew, you have the right to:</p>
+              <div class="bg-background-alt p-6 border border-gray-600">
+                <p class="text-gray-400 mb-4 font-mono">
+                  As a member of our crew, you have the right to:
+                </p>
                 <ul class="list-disc list-inside text-gray-400 space-y-2 font-mono">
                   <li>Access and review your personal information in our ship's logs</li>
                   <li>Request corrections to any inaccurate crew manifest data</li>
@@ -82,17 +107,23 @@ import Heading from '../components/sections/Heading.astro';
             <section>
               <Heading level={3} size="xl" class="mb-4">Treasure Protection</Heading>
               <p class="text-gray-400 mb-4 font-mono">
-                We implement industry-standard security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. Our data is encrypted both in transit and at rest, stored on secure servers with restricted access.
+                We implement industry-standard security measures to protect your personal
+                information from unauthorized access, alteration, disclosure, or destruction. Our
+                data is encrypted both in transit and at rest, stored on secure servers with
+                restricted access.
               </p>
               <p class="text-gray-400 font-mono">
-                However, no method of transmission over the Internet is 100% secure. While we strive to protect your information, we cannot guarantee absolute security during your digital voyage.
+                However, no method of transmission over the Internet is 100% secure. While we strive
+                to protect your information, we cannot guarantee absolute security during your
+                digital voyage.
               </p>
             </section>
 
             <section>
               <Heading level={3} size="xl" class="mb-4">Third-Party Waters</Heading>
               <p class="text-gray-400 mb-4 font-mono">
-                We may share your information with trusted third-party service providers who help us operate our conference, such as:
+                We may share your information with trusted third-party service providers who help us
+                operate our conference, such as:
               </p>
               <ul class="list-disc list-inside text-gray-400 space-y-2 font-mono">
                 <li>Event management platforms</li>
@@ -101,19 +132,21 @@ import Heading from '../components/sections/Heading.astro';
                 <li>Analytics and website performance tools</li>
               </ul>
               <p class="text-gray-400 mt-4 font-mono">
-                These partners are bound by confidentiality agreements and may only use your information to provide services on our behalf.
+                These partners are bound by confidentiality agreements and may only use your
+                information to provide services on our behalf.
               </p>
             </section>
 
             <section>
               <Heading level={3} size="xl" class="mb-4">Signal the Harbor Master</Heading>
               <p class="text-gray-400 mb-4 font-mono">
-                If you have any questions about these Ship's Articles or wish to exercise your crew rights, please contact our Harbor Master:
+                If you have any questions about these Ship's Articles or wish to exercise your crew
+                rights, please contact our Harbor Master:
               </p>
-              <div class="bg-[#061126] p-4 border border-gray-600">
+              <div class="bg-background-alt p-4 border border-gray-600">
                 <p class="text-gray-400 font-mono">
-                  Email: privacy@boatingaccident.fi<br/>
-                  Address: Boating Accident Privacy Office, Finland<br/>
+                  Email: privacy@boatingaccident.fi<br />
+                  Address: Boating Accident Privacy Office, Finland<br />
                   Response Time: Within 7 maritime days
                 </p>
               </div>
@@ -122,7 +155,9 @@ import Heading from '../components/sections/Heading.astro';
             <section>
               <Heading level={3} size="xl" class="mb-4">Maritime Law Changes</Heading>
               <p class="text-gray-400 font-mono">
-                We may update these Ship's Articles from time to time. Any changes will be posted on this page with a new effective date. We encourage you to review this document periodically during your voyage with us.
+                We may update these Ship's Articles from time to time. Any changes will be posted on
+                this page with a new effective date. We encourage you to review this document
+                periodically during your voyage with us.
               </p>
             </section>
           </div>
