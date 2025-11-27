@@ -33,7 +33,7 @@ const { title, currentPage } = Astro.props
   <body class="bg-background text-white">
     <Navigation currentPage={currentPage} />
 
-    <div class="min-h-screen grid grid-cols-5">
+    <div class="grid grid-cols-5 max-h-fit">
       <slot />
     </div>
 
