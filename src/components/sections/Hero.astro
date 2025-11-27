@@ -2,6 +2,23 @@
 import Heading from "./Heading.astro"
 ---
 
+<style>
+  @keyframes pulse-glow {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+  }
+
+  .animate-date {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+</style>
+
 <!-- Hero Section -->
 <section
   class="relative text-white border-b border-gray-700 col-span-5 overflow-hidden -mt-20 pt-20"
@@ -16,10 +33,10 @@ import Heading from "./Heading.astro"
 
   <!-- Content -->
   <div class="relative mx-auto max-w-6xl px-6 py-32 lg:px-8 lg:py-64">
-    <div class="grid grid-cols-1 text-left">
+    <div class="grid grid-cols-1 text-left max-h-fit">
       <Heading level={1} size="4xl" class="sm:text-5xl lg:text-6xl">
         Boating Accident
-        <span class="block text-gray-400">2026</span>
+        <span class="block text-gray-400 animate-date">20.-21.5.2026</span>
       </Heading>
       <p class="mt-6 max-w-2xl text-lg leading-8 text-gray-300 sm:text-xl font-mono">
         A Totally Unique Crypto Conference
