@@ -1,4 +1,6 @@
 ---
+import TicketCTA from "../primitives/TicketCTA.astro"
+
 export interface Props {
   currentPage?: string
 }
@@ -7,38 +9,71 @@ const { currentPage } = Astro.props
 ---
 
 <style>
-  .marquee-container {
-    view-transition-name: marquee-logo;
+  .mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
   }
 
-  .marquee-text {
-    animation: marquee 13.5s linear infinite;
-    animation-play-state: running;
+  .mobile-menu.open {
+    max-height: 500px;
   }
 
-  @keyframes marquee {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
+  .hamburger span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+  }
+
+  .hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+  }
+
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
   }
 </style>
 
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    hamburger?.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu?.classList.toggle('open');
+    });
+
+    // Close menu when clicking a link
+    const mobileLinks = mobileMenu?.querySelectorAll('a');
+    mobileLinks?.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger?.classList.remove('open');
+        mobileMenu?.classList.remove('open');
+      });
+    });
+  });
+</script>
+
 <nav
-  class="sticky top-0 z-50 text-white py-4 bg-background/60 backdrop-blur-sm"
+  class="sticky top-0 z-50 text-white py-6 bg-background/40 backdrop-blur-sm"
   style="view-transition-name: navbar;"
 >
   <div class="mx-auto max-w-6xl px-6 lg:px-8">
     <div class="flex items-center justify-between">
-      <div
-        class="text-2xl font-bold overflow-hidden whitespace-nowrap text-foreground marquee-container"
-        style="font-family: 'Handjet', monospace; image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges; text-rendering: geometricPrecision; font-weight: 400; letter-spacing: 0.1em;"
+      <a href="/" class="text-2xl font-bold font-mono"
+        ><img src="/ba-logo.png" alt="Boating Accident Logo" class="w-42" /></a
       >
-        <a href="/" class="inline-block marquee-text">Boating Accident 2026</a>
-      </div>
-      <div class="flex items-center space-x-6 font-mono">
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-8 font-mono">
         <a
           href="/about"
           class={currentPage === "about"
@@ -51,14 +86,39 @@ const { currentPage } = Astro.props
             ? "text-white"
             : "hover:text-white transition-colors text-gray-400"}>Program</a
         >
+        <TicketCTA />
+      </div>
+
+      <!-- Hamburger Menu Button -->
+      <button
+        id="hamburger"
+        class="md:hidden hamburger focus:outline-none"
+        aria-label="Toggle menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu md:hidden">
+      <div class="flex flex-col space-y-4 pt-4 font-mono">
         <a
-          href="https://luma.com/ibeqegrr"
-          class="bg-white text-black px-4 py-2 text-xs font-bold uppercase hover:bg-gray-200 transition-colors border border-white"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/about"
+          class={currentPage === "about"
+            ? "text-white"
+            : "hover:text-white transition-colors text-gray-400"}>About</a
         >
-          Buy Tickets
-        </a>
+        <a
+          href="/program"
+          class={currentPage === "program"
+            ? "text-white"
+            : "hover:text-white transition-colors text-gray-400"}>Program</a
+        >
+        <div class="pt-2">
+          <TicketCTA />
+        </div>
       </div>
     </div>
   </div>
