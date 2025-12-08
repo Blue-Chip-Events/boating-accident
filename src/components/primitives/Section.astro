@@ -1,0 +1,17 @@
+---
+import MarqueeSeparator from "./MarqueeSeparator.astro"
+
+interface SectionProps {
+  children: any
+  title?: string
+  color?: "background" | "accent" | "alt"
+}
+const { title, color = "background" } = Astro.props as SectionProps
+---
+
+<section class={`col-span-5 bg-${color}`}>
+  <MarqueeSeparator>{title}</MarqueeSeparator>
+  <div class="mx-auto max-w-6xl px-6 lg:px-8 py-16 lg:py-24">
+    <slot />
+  </div>
+</section>
