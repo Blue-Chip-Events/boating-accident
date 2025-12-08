@@ -7,9 +7,17 @@ interface SectionProps {
   color?: "background" | "accent" | "alt"
 }
 const { title, color = "background" } = Astro.props as SectionProps
+
+const colorClasses = {
+  background: "bg-background",
+  accent: "bg-accent",
+  alt: "bg-alt",
+}
+const colorClass = colorClasses[color]
+const textClass = color === "accent" ? "text-black" : "text-white"
 ---
 
-<section class={`col-span-5 bg-${color}`}>
+<section class={`col-span-5 ${colorClass} ${textClass}`}>
   <MarqueeSeparator>{title}</MarqueeSeparator>
   <div class="mx-auto max-w-6xl px-6 lg:px-8 py-16 lg:py-24">
     <slot />
