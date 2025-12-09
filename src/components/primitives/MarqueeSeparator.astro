@@ -10,8 +10,6 @@ if (contentLength === 0) {
     finalContent += ` ${slotContent}`
   }
 }
-
-console.log("MarqueeSeparator content length:", contentLength)
 ---
 
 <style>
@@ -29,6 +27,7 @@ console.log("MarqueeSeparator content length:", contentLength)
     text-rendering: geometricPrecision;
     font-weight: 400;
     letter-spacing: 0.1em;
+    transition: opacity 0.3s ease;
   }
 
   .marquee__content {
@@ -86,7 +85,7 @@ console.log("MarqueeSeparator content length:", contentLength)
 </style>
 
 <div
-  class="marquee enable-animation text-xl font-bold text-foreground w-full absolute bg-background py-2"
+  class="marquee enable-animation text-xl font-bold text-foreground w-full absolute bg-background py-2 opacity-90 hover:opacity-100 lowercase"
 >
   <span
     class="marquee__content enable-animation marquee--pos-absolute"
