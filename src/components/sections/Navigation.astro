@@ -42,7 +42,7 @@ const { currentPage } = Astro.props
 </style>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener('astro:page-load', () => {
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobile-menu');
 
