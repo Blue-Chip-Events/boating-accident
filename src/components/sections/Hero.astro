@@ -1,4 +1,5 @@
 ---
+import TicketCTA from "../primitives/TicketCTA.astro"
 import Heading from "./Heading.astro"
 ---
 
@@ -15,7 +16,9 @@ import Heading from "./Heading.astro"
   }
 
   @keyframes pulse-slow {
-    0%, 90%, 100% {
+    0%,
+    90%,
+    100% {
       opacity: 1;
       transform: translateX(0) scale(1);
     }
@@ -35,15 +38,15 @@ import Heading from "./Heading.astro"
 </style>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const dateElement = document.querySelector('.animate-date');
+  window.addEventListener("astro:page-load", () => {
+    const dateElement = document.querySelector(".animate-date")
     if (dateElement) {
       // Wait for the entrance animation to complete, then start pulsing slowly
       setTimeout(() => {
-        dateElement.classList.add('pulsing');
-      }, 1500); // Match the entrance animation duration
+        dateElement.classList.add("pulsing")
+      }, 1500) // Match the entrance animation duration
     }
-  });
+  })
 </script>
 
 <!-- Hero Section -->
@@ -56,27 +59,24 @@ import Heading from "./Heading.astro"
   </video>
 
   <!-- Overlay Curtain -->
-  <div class="absolute top-0 left-0 w-full h-full bg-background opacity-85"></div>
+  <div class="absolute top-0 left-0 w-full h-full bg-background opacity-75"></div>
 
   <!-- Content -->
-  <div class="relative mx-auto max-w-6xl px-6 py-32 lg:px-8 lg:py-64">
+  <div
+    class="relative flex flex-col items-start justify-center mx-auto max-w-6xl px-6 py-32 lg:px-8 lg:h-200 max-h-[80vh]"
+  >
     <div class="grid grid-cols-1 text-left max-h-fit">
       <Heading level={1} size="4xl" class="sm:text-5xl lg:text-6xl">
-        Boating Accident
+        Don't Lose Your Keys!
         <span class="block text-gray-400 animate-date">20.-21.5.2026</span>
       </Heading>
       <p class="mt-6 max-w-2xl text-lg leading-8 text-gray-300 sm:text-xl font-mono">
-        A Totally Unique Crypto Conference
+        Welcome to the first annual Boating Accident! Ticket sales open now with <strong
+          >early bird pricing!</strong
+        >
       </p>
       <div class="mt-10 flex flex-col sm:flex-row items-start gap-4">
-        <a
-          href="https://luma.com/ibeqegrr"
-          class="bg-white text-black px-8 py-3 text-sm font-bold font-mono uppercase hover:bg-gray-200 transition-colors border border-white"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Buy Tickets
-        </a>
+        <TicketCTA />
       </div>
     </div>
   </div>
