@@ -51,20 +51,14 @@ const { currentPage } = Astro.props
       mobileMenu?.classList.remove('open');
     };
 
-    hamburger?.addEventListener('click', (e) => {
+    const handleHamburgerClick = (e: Event) => {
       e.stopPropagation();
-      hamburger.classList.toggle('open');
+      hamburger?.classList.toggle('open');
       mobileMenu?.classList.toggle('open');
-    });
-
-    // Close menu when clicking a link
-    const mobileLinks = mobileMenu?.querySelectorAll('a');
-    mobileLinks?.forEach(link => {
-      link.addEventListener('click', closeMenu);
-    });
+    };
 
     // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
+    const handleDocumentClick = (e: Event) => {
       const isMenuOpen = mobileMenu?.classList.contains('open');
       const clickedInsideMenu = mobileMenu?.contains(e.target as Node);
       const clickedHamburger = hamburger?.contains(e.target as Node);
@@ -72,14 +66,35 @@ const { currentPage } = Astro.props
       if (isMenuOpen && !clickedInsideMenu && !clickedHamburger) {
         closeMenu();
       }
-    });
+    };
 
     // Close menu when pressing Escape key
-    document.addEventListener('keydown', (e) => {
+    const handleKeydown = (e: KeyboardEvent) => {
       if (e.key === 'Escape' && mobileMenu?.classList.contains('open')) {
         closeMenu();
       }
+    };
+
+    hamburger?.addEventListener('click', handleHamburgerClick);
+
+    // Close menu when clicking a link
+    const mobileLinks = mobileMenu?.querySelectorAll('a');
+    mobileLinks?.forEach(link => {
+      link.addEventListener('click', closeMenu);
     });
+
+    document.addEventListener('click', handleDocumentClick);
+    document.addEventListener('keydown', handleKeydown);
+
+    // Cleanup event listeners on page unload
+    window.addEventListener('astro:before-swap', () => {
+      hamburger?.removeEventListener('click', handleHamburgerClick);
+      mobileLinks?.forEach(link => {
+        link.removeEventListener('click', closeMenu);
+      });
+      document.removeEventListener('click', handleDocumentClick);
+      document.removeEventListener('keydown', handleKeydown);
+    }, { once: true });
   });
 </script>
 
