@@ -59,8 +59,6 @@ const { currentPage } = Astro.props
 
     // Close menu when clicking outside
     const handleDocumentClick = (e: Event) => {
-      if (!e.target) return;
-      
       const isMenuOpen = mobileMenu?.classList.contains('open');
       const clickedInsideMenu = mobileMenu?.contains(e.target as Node);
       const clickedHamburger = hamburger?.contains(e.target as Node);
