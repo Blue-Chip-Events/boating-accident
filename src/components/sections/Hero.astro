@@ -1,6 +1,7 @@
 ---
 import TicketCTA from "../primitives/TicketCTA.astro"
 import Heading from "./Heading.astro"
+import { Calendar, Pin, type Icon as IconType } from "@lucide/astro"
 ---
 
 <style>
@@ -66,13 +67,30 @@ import Heading from "./Heading.astro"
     class="relative flex flex-col items-start justify-center mx-auto max-w-6xl px-6 py-32 lg:px-8 lg:h-200 max-h-[80vh]"
   >
     <div class="grid grid-cols-1 text-left max-h-fit">
-      <Heading level={1} size="4xl" class="sm:text-5xl lg:text-6xl">
+      <Heading level={1} size="3xl" class="sm:text-4xl lg:text-5xl">
         Don't Lose Your Keys!
-        <span class="block text-gray-400 animate-date">20.-21.5.2026</span>
       </Heading>
-      <p class="mt-6 max-w-2xl text-lg leading-8 text-gray-300 sm:text-xl font-mono">
-        Welcome to the first annual Boating Accident! Ticket sales open now with <strong
-          >early bird pricing!</strong
+      <div class="flex flex-col gap-2 py-4 text-xl sm:text-md text-gray-400">
+        <span class="whitespace-nowrap inline-flex gap-2 items-center">
+          <strong class="text-hackathon">Hackathon</strong>
+          <div class="inline-flex items-center gap-1">
+            <Calendar />18.–19.5.2026,
+          </div>
+          <div class="inline-flex items-center gap-1"><Pin />Turku, Finland</div>
+        </span>
+        <span class="whitespace-nowrap inline-flex gap-2 items-center">
+          <strong class="text-conference">Conference</strong>
+          <div class="inline-flex items-center gap-1">
+            <Calendar />20.–21.5.2026,
+          </div>
+          <div class="inline-flex items-center gap-1">
+            <Pin />Turku, Finland – Naantali – Kapellskär – Naantali
+          </div>
+        </span>
+      </div>
+      <p class="mt-6 max-w-2xl text-md leading-8 text-gray-300 sm:text-xl">
+        Welcome to the first annual Boating Accident! Ticket sales open now with <b
+          >early bird pricing!</b
         >
       </p>
       <div class="mt-10 flex flex-col sm:flex-row items-start gap-4">
