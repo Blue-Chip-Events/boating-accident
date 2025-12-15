@@ -94,7 +94,7 @@ const { currentPage } = Astro.props
       });
       document.removeEventListener('click', handleDocumentClick);
       document.removeEventListener('keydown', handleKeydown);
-    }, { once: true });
+    });
   });
 </script>
 
