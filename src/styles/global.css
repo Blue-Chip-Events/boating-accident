@@ -5,6 +5,8 @@
   --color-background-alt: #061126;
   --color-accent: #F0F0F0;
   --color-foreground: #60F2FF;
+  --color-hackathon: #ffa08c;
+  --color-conference: #8cffca;
   --background-image-tiled: url('/tile.png');
   --background-image-tiled-dark: url('/tiledark.png');
 }
@@ -17,10 +19,6 @@
 
 .bg-tiled-dark {
   background-size: 25%;
-}
-
-strong {
-  color: var(--color-foreground);
 }
 
 /* View Transition Styles */

@@ -42,24 +42,29 @@ const { currentPage } = Astro.props
 </style>
 
 <script>
-  window.addEventListener('astro:page-load', () => {
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobile-menu');
+  window.addEventListener("astro:page-load", () => {
+    const hamburger = document.getElementById("hamburger")
+    const mobileMenu = document.getElementById("mobile-menu")
 
-    hamburger?.addEventListener('click', () => {
-      hamburger.classList.toggle('open');
-      mobileMenu?.classList.toggle('open');
-    });
+    hamburger?.addEventListener("click", () => {
+      hamburger.classList.toggle("open")
+      mobileMenu?.classList.toggle("open")
+      hamburger.setAttribute(
+        "aria-expanded",
+        hamburger.classList.contains("open") ? "true" : "false"
+      )
+    })
 
     // Close menu when clicking a link
-    const mobileLinks = mobileMenu?.querySelectorAll('a');
-    mobileLinks?.forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger?.classList.remove('open');
-        mobileMenu?.classList.remove('open');
-      });
-    });
-  });
+    const mobileLinks = mobileMenu?.querySelectorAll("a")
+    mobileLinks?.forEach((link) => {
+      link.addEventListener("click", () => {
+        hamburger?.classList.remove("open")
+        mobileMenu?.classList.remove("open")
+        hamburger?.setAttribute("aria-expanded", "false")
+      })
+    })
+  })
 </script>
 
 <nav
@@ -94,6 +99,7 @@ const { currentPage } = Astro.props
         id="hamburger"
         class="md:hidden hamburger focus:outline-none"
         aria-label="Toggle menu"
+        aria-controls="mobile-menu"
       >
         <span></span>
         <span></span>
