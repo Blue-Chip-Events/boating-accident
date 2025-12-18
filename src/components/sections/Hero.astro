@@ -71,20 +71,27 @@ import { Calendar, Pin, type Icon as IconType } from "@lucide/astro"
         Don't Lose Your Keys!
       </Heading>
       <div class="flex flex-col gap-2 py-4 text-xl sm:text-md text-gray-400">
-        <span class="whitespace-nowrap inline-flex gap-2 items-center">
+        <span class="flex gap-2 items-center flex-wrap md:flex-nowrap">
           <strong class="text-hackathon">Hackathon</strong>
-          <div class="inline-flex items-center gap-1">
-            <Calendar />18.–19.5.2026,
+          <div class="flex items-center flex-wrap md:flex-nowrap md:w-auto w-full">
+            <div class="flex items-center gap-1 shrink-0 min-w-max md:w-auto w-full">
+              <Calendar />18.–19.5.2026,
+            </div>
+            <div class="flex items-center gap-1 shrink-0 min-w-max"><Pin />Turku, Finland</div>
           </div>
-          <div class="inline-flex items-center gap-1"><Pin />Turku, Finland</div>
         </span>
-        <span class="whitespace-nowrap inline-flex gap-2 items-center">
+
+        <span class="flex gap-2 items-center flex-wrap md:flex-nowrap">
           <strong class="text-conference">Conference</strong>
-          <div class="inline-flex items-center gap-1">
-            <Calendar />20.–21.5.2026,
-          </div>
-          <div class="inline-flex items-center gap-1">
-            <Pin />Turku, Finland – Naantali – Kapellskär – Naantali
+          <div class="flex items-center flex-wrap md:flex-nowrap md:w-auto w-full">
+            <div class="flex items-center gap-1 shrink-0 min-w-max md:w-auto w-full">
+              <Calendar />20.–21.5.2026,
+            </div>
+            <div
+              class="flex items-center gap-1 shrink md:shrink-0 min-w-max md:w-auto w-full text-wrap whitespace-normal"
+            >
+              <Pin />Turku – Naantali – Kapellskär – Naantali
+            </div>
           </div>
         </span>
       </div>

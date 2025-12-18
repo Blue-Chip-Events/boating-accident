@@ -1,4 +1,4 @@
-import { ContactsApi, CreateContact } from "@getbrevo/brevo";
+import { ContactsApi } from "@getbrevo/brevo";
 import { z } from 'astro/zod';
 import { defineAction } from 'astro:actions';
 
@@ -43,39 +43,13 @@ export const server = {
     accept: 'form',
     input: z.object({
       email: z.string().email(),
-      //recaptchaToken: z.string(),
     }),
     handler: async (input) => {
       console.log(input);
-      /* console.error('Received email:', input.email);
-      console.error('Received reCAPTCHA token:', input.recaptchaToken);
-      
-      const recaptchaSuccess = await processCaptcha(input.recaptchaToken);
-
-      console.error('reCAPTCHA success:', recaptchaSuccess);
-      if (!recaptchaSuccess) {
-        return {
-          error: {
-            message: 'reCAPTCHA verification failed',
-            fields: {
-              email: ['reCAPTCHA verification failed'],
-            },
-          },
-        };
-      } */
-
 
       let contactAPI = new ContactsApi();
       contactAPI.setApiKey(0, process.env.BREVO_API_KEY || "");
-
-      let contact = new CreateContact();
-      contact.email = input.email;
-
-      contactAPI.createContact(contact).then(res => {
-        console.log(JSON.stringify(res.body));
-      }).catch(err => {
-        console.error("Error creating contact:", err.body);
-      });
+      await contactAPI.addContactToList(Number(process.env.BREVO_LIST_ID || 4), {emails: [ input.email || "test@ebin.com" ]});
 
       return {
         success: true,

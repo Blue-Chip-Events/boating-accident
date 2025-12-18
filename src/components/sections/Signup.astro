@@ -1,24 +1,14 @@
 ---
 import Section from "../primitives/Section.astro"
 import Heading from "./Heading.astro"
-import { actions, isInputError } from "astro:actions"
-
-const result = Astro.getActionResult(actions.newsletter)
-console.log(result)
-const inputErrors = isInputError(result?.error) ? result.error.fields : {}
-
-console.error("📄 PAGE: About to call action")
-const result2 = await Astro.callAction(actions.test, {})
-console.error("📄 PAGE: Result =", result2)
 ---
 
-<script is:inline src="https://www.google.com/recaptcha/api.js"></script>
+<!-- <script is:inline src="https://www.google.com/recaptcha/api.js"></script>
 <script is:inline>
   function recaptcha() {
     document.querySelector("form").submit()
   }
-</script>
-
+</script> -->
 <Section title="Newsletter">
   <div class="mx-auto max-w-6xl px-6 lg:px-8">
     <div class="text-center">
@@ -26,31 +16,12 @@ console.error("📄 PAGE: Result =", result2)
     </div>
 
     <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
-      {result?.error && <p class="error">Unable to sign up. Please try again later.</p>}
-      {inputErrors.email && <p class="error">{inputErrors.email.join(",")}</p>}
-
-      <form method="POST" action={actions.newsletter}>
-        <input
-          type="email"
-          name="email"
-          transition:persist
-          required
-          placeholder="Your email address"
-          class="w-full px-3 py-2 text-sm text-black rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 ring-1 ring-inset ring-gray-300"
-          aria-describedby="error"
-        />
-        <input
-          type="submit"
-          class="block w-full px-3 py-2 mt-8 text-sm font-semibold text-center text-white cursor-pointer leading-6 rounded-md g-recaptcha focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 ring-1 ring-inset ring-blue-200 hover:ring-blue-300 hover:bg-blue-600"
-          data-sitekey={import.meta.env.RECAPTCHA_SITE_KEY || process.env.RECAPTCHA_SITE_KEY}
-          data-callback="recaptcha"
-          data-action="submit"
-          name="recaptchaToken"
-          value="Login"
-        />
-      </form>
-
-      {result && !result.error && <p class="success">Added ebin to cart</p>}
+      <iframe
+        src="https://d3c32627.sibforms.com/serve/MUIFABV2cDFp5d7hVWlhhUUk7OR1frJEYIEIcgoVxj8xvsUVnpynlTCRyhLQUISDXK8AO4-qOrfqYtOhw1dhGj58E5facBASgSeFqWpNDpKf6ohZqFNP_sOW3OMRYAOGY8cPGTM4aSkC9HKh-ww6ru2RqruwsI1d76fSO0ds75f9BGBo8edJH8qWxvbgKE_UO19_KiFQP6iXDTaxbA=="
+        allowfullscreen
+        seamless="seamless"
+        scrolling="no"
+        class="w-full flex h-84 overflow-y-hidden"></iframe>
     </div>
   </div>
 </Section>
