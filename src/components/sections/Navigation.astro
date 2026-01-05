@@ -86,6 +86,12 @@ const { currentPage } = Astro.props
             : "hover:text-white transition-colors text-gray-400"}>About</a
         >
         <a
+          href="/speakers"
+          class={currentPage === "speakers"
+            ? "text-white"
+            : "hover:text-white transition-colors text-gray-400"}>Speakers</a
+        >
+        <a
           href="/program"
           class={currentPage === "program"
             ? "text-white"
@@ -115,6 +121,12 @@ const { currentPage } = Astro.props
           class={currentPage === "about"
             ? "text-white"
             : "hover:text-white transition-colors text-gray-400"}>About</a
+        >
+        <a
+          href="/speakers"
+          class={currentPage === "speakers"
+            ? "text-white"
+            : "hover:text-white transition-colors text-gray-400"}>Speakers</a
         >
         <a
           href="/program"
