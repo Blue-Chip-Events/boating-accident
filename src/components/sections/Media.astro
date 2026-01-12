@@ -1,0 +1,9 @@
+---
+import Section from "../primitives/Section.astro"
+import MediaCarousel from "../MediaCarousel"
+import { mediaItems } from "../../data/mediaItems"
+---
+
+<Section title="in the media" color="alt">
+  <MediaCarousel items={mediaItems} client:load />
+</Section>

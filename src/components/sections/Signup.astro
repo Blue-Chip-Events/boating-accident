@@ -1,28 +1,23 @@
 ---
+import Section from "../primitives/Section.astro"
 import Heading from "./Heading.astro"
 ---
 
-<section class="bg-background-alt text-white py-16 lg:py-24 border-t border-b border-gray-700 col-span-5">
+<Section title="Newsletter">
   <div class="mx-auto max-w-6xl px-6 lg:px-8">
     <div class="text-center">
-      <Heading level={2} size="3xl" class="sm:text-4xl"> Newsletter </Heading>
-      <p class="mt-4 text-lg text-gray-400 font-mono">Stay Updated</p>
+      <Heading level={2} size="3xl" class="sm:text-4xl">Sign Up for Communications</Heading>
     </div>
 
     <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
-      <input
-        type="email"
-        placeholder="Enter your email address"
-        class="w-full px-4 py-3 text-white bg-background-alt border border-gray-600 focus:outline-none focus:border-white font-mono"
-      />
-      <button
-        type="submit"
-        class="w-full sm:w-auto px-6 py-3 text-black bg-white hover:bg-gray-200 font-bold transition-colors duration-200 focus:outline-none font-mono"
-      >
-        Sign Up
-      </button>
+      <iframe
+        src="https://d3c32627.sibforms.com/serve/MUIFABV2cDFp5d7hVWlhhUUk7OR1frJEYIEIcgoVxj8xvsUVnpynlTCRyhLQUISDXK8AO4-qOrfqYtOhw1dhGj58E5facBASgSeFqWpNDpKf6ohZqFNP_sOW3OMRYAOGY8cPGTM4aSkC9HKh-ww6ru2RqruwsI1d76fSO0ds75f9BGBo8edJH8qWxvbgKE_UO19_KiFQP6iXDTaxbA=="
+        allowfullscreen
+        title="Signup Form"
+        seamless="seamless"
+        scrolling="no"
+        sandbox="allow-forms allow-scripts allow-same-origin"
+        class="w-full flex h-96 overflow-y-hidden"></iframe>
     </div>
-
-    <p class="mt-4 text-center text-sm text-gray-500 font-mono">No spam. Unsubscribe anytime.</p>
   </div>
-</section>
+</Section>
