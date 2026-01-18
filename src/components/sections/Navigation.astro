@@ -42,7 +42,7 @@ const { currentPage } = Astro.props
 </style>
 
 <script>
-  window.addEventListener("astro:page-load", () => {
+  function initHamburgerMenu() {
     const hamburger = document.getElementById("hamburger")
     const mobileMenu = document.getElementById("mobile-menu")
 
@@ -64,7 +64,10 @@ const { currentPage } = Astro.props
         hamburger?.setAttribute("aria-expanded", "false")
       })
     })
-  })
+  }
+
+  document.addEventListener("DOMContentLoaded", initHamburgerMenu)
+  document.addEventListener("astro:page-load", initHamburgerMenu)
 </script>
 
 <nav
